@@ -51,6 +51,11 @@ instances:
   #
   # collect_events: false
   #
+  # Matching the pods to Kubernetes services requires to retrieve events regularly.
+  # To reduce the traffic to the apiserver, only query them every 5 minutes, adding a delay
+  # in pod -> service matching. You can configure it below (in minutes)
+  #
+  # autoconf_event_delay: 5
   #
   # The namespaces for which events should be collected.
   # If not modified, the 'default' namespace will be used.
